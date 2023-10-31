@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grading Calculator</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background-color: #ffffff;
+            border-radius: 5px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin-top: 50px;
+        }
+        h1 {
+            text-align: center;
+            color: #007bff;
+        }
+        .btn-primary, .btn-secondary {
+            margin-top: 10px;
+        }
+        .result {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            border-radius: 5px;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+        .description {
+            background-color: #ffc107;
+            border: 1px solid #ffca28;
+            border-radius: 5px;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .warning {
+            color: #d32f2f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Grade Converter</h1>
+        <div class="description">
+            <p><span class="warning">Warning:</span> This grading calculator is for reference purposes only. The actual grading system may vary depending on your institution's policies. Please consult your school or institution for official grading guidelines.</p>
+            <p class="info"> The grade Calculator is base on this link <a href="http://katipunan.jrmsu.edu.ph/academics/academic-policies/" target="_blank">Source | Click Me</a></p>
+        </div>
+        <form id="gradingForm">
+            <div class="mb-3">
+                <label for="schoolId" class="form-label">School ID # <b style="color:green">⚠️Capitalize Letter</b>:</label>
+                <input type="text" class="form-control" id="schoolId" placeholder="20-A-00863" required>
+                <div id="schoolIdError" class="text-danger"></div>
+            </div>
+            <div class="mb-3">
+                <label for="name" class="form-label">Enter Full Name:</label> <br>
+                <input type="text" class "form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="score" class="form-label">Enter Score:</label>
+                <input type="number" class="form-control" placeholder="e.g. 89" id="score" required>
+            </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary">Calculate Grade</button>
+                <button type="button" class="btn btn-secondary" id="clearBtn">Clear</button>
+            </div>
+        </form>
+        <div id="result" class="mt-4"></div>
+        <a href="index.html" class="btn btn-primary" role="button">Back</a>
+    </div>
+
+    <!-- Include Bootstrap JS and jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+    
+    <script>
+        // Function to validate the School ID format
+        function validateSchoolId(schoolId) {
+            const pattern = /^(\d{2}-[A-Z]-\d{5})$/;
+            return pattern.test(schoolId);
+        }
+
+        // Function to calculate and display the grade
+        function calculateGrade() {
+            const schoolId = document.getElementById("schoolId").value;
+            const name = document.getElementById("name").value;
+            const score = parseInt(document.getElementById("score").value);
+
+            if (!validateSchoolId(schoolId)) {
+                document.getElementById("schoolIdError").innerText = "Invalid School ID format";
+                return;
+            } else {
+                document.getElementById("schoolIdError").innerText = "";
+            }
+
+            // Grading calculation code
+            let grade = "";
+            if (score >= 99 && score <= 100) {
+                grade = "1.0 [Excellent]";
+            } else if (score >= 97 && score < 99) {
+                grade = "1.1 [Very Good]";
+            } else if (score >= 95 && score < 97) {
+                grade = "1.2 [Very Good]";
+            } else if (score >= 93 && score < 95) {
+                grade = "1.3 [Very Good]";
+            } else if (score >= 91 && score < 93) {
+                grade = "1.4 [Very Good]";
+            } else if (score >= 90) {
+                grade = "1.5 [Good]";
+            } else if (score >= 89) {
+                grade = "1.6 [Good]";
+            } else if (score >= 88) {
+                grade = "1.7 [Good]";
+            } else if (score >= 87) {
+                grade = "1.8 [Good]";
+            } else if (score >= 86) {
+                grade = "1.9 [Good]";
+            } else if (score >= 85) {
+                grade = "2.0 [Good]";
+            } else if (score >= 84) {
+                grade = "2.1 [Good]";
+            } else if (score >= 83) {
+                grade = "2.2 [Good]";
+            } else if (score >= 82) {
+                grade = "2.3 [Good]";
+            } else if (score >= 81) {
+                grade = "2.4 [Good]";
+            } else if (score >= 80) {
+                grade = "2.5 [Good]";
+            } else if (score >= 79) {
+                grade = "2.6 [Fair]";
+            } else if (score >= 78) {
+                grade = "2.7 [Fair]";
+            } else if (score >= 77) {
+                grade = "2.8 [Fair]";
+            } else if (score >= 76) {
+                grade = "2.9 [Fair]";
+            } else if (score >= 75) {
+                grade = "3.0 [Fair]";
+            } else if (score >= 60) {
+                grade = "5.0 [Drop/Failed]";
+            } else {
+                grade = "[Incomplete (Lacks Requirements/Final Exam)]";
+            }
+
+            const result = `Hello <strong>${name}</strong><br>School ID: <strong>${schoolId}</strong><br>Grade: <strong>${grade}</strong>`;
+            document.getElementById("result").innerHTML = result;
+        }
+
+        // Function to clear form data
+        function clearForm() {
+            document.getElementById("schoolId").value = "";
+            document.getElementById("name").value = "";
+            document.getElementById("score").value = "";
+            document.getElementById("result").innerHTML = "";
+            document.getElementById("schoolIdError").innerText = "";
+        }
+
+        // calculateGrade function to the form submission
+        document.getElementById("gradingForm").addEventListener("submit", function (e) {
+            e.preventDefault();
+            calculateGrade();
+        });
+
+        // clearForm function to the "Clear" button
+        document.getElementById("clearBtn").addEventListener("click", clearForm);
+    </script>
+    
+</body>
+</html>
