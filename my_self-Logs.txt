@@ -1,0 +1,10 @@
+6/22/2025
+* when adding images path in a bootstrap carousel you 
+should add the exact path of the image like
+
+( /folderImage/theimagespath----.jpg )
+something like this:
+
+/images/WIN_20250622_13_35_58_Pro.jpg
+
+------------------------------------------------
