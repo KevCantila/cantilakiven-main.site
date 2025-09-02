@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <button id="f_button">Update Paragraph 1</button>
+
+    <button id="sec_button">Update Paragraph 2</button>
+
+    <hr>
+
+
+    <p id="p_one" style="color: blue;">This is Paragraph One</p>
+    <p id="p_two" style="color: red;">This is Paragraph Two</p>
+
+
+    <hr>
+    
+    <button id="empty_par">ClickMe</button>
+
+    <p class="emptyParagrapgh"></p>
+
+    <hr>
+
+    <button id="styleText">Style Text</button>
+    <p class="styledText">This is an styled text using javascript</p>
+    
+
+
+    <script type="text/javascript">
+        
+         //<!-- alert('Page Loading') -->
+
+        // document.getElementById('button').innerHTML='hello kiven'
+        // 
+        // Updating the content of the first paragraph using JavaScript
+        document.getElementById('f_button').onclick = function() {
+            document.getElementById('p_one').innerHTML = 'Paragraph One is Updated';
+            document.getElementById('p_one').innerHTML = document.getElementById('p_one').innerHTML + ' = Update confirmed!'
+        }
+        // Updating the content of a paragraph using JavaScript
+        document.getElementById('sec_button').onclick = function() {
+            document.getElementById('p_two').innerHTML = 'Paragraph Two is Updated';
+            document.getElementById('p_two').innerHTML = document.getElementById('p_two').innerHTML + ' = Update confirmed!'
+        }
+        // Filling an empty paragraph using JavaScript
+        document.getElementById('empty_par').onclick = function() {
+            document.querySelector('.emptyParagrapgh').innerHTML = 'This is an empty paragraph which is now filled with text using JavaScript.';
+        }
+        // Styling text using JavaScript
+        document.getElementById('styleText').onclick = function() {
+            let styledElement = document.querySelector('.styledText');
+            styledElement.style.color = 'green';
+            styledElement.style.fontSize = '20px';
+            styledElement.style.fontWeight = 'bold';
+            styledElement.style.backgroundColor = 'lightgray';
+            styledElement.style.padding = '10px';
+            styledElement.style.borderRadius = '5px';
+        }
+    </script>
+</body>
+</html>

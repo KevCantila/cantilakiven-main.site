@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="/CSS/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+
+  <!-- You can use EITHER the offline OR the CDN, but not both -->
+  
+  <!-- CDN version -->
+  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"> -->
+  
+  <!-- Offline version cdn for offline purposes-->
+  <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css">
+  <!-- kwekwe -->
+</head>
+<body class="background-color">
+  <!-- Navigation -->
+  <header class="bg-dark">
+      <!-- nAVIGATION ICONS -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="header-nav" role="navigation">
+        <div class="container"><a class="link-light navbar-brand site-title mb-0" href="/home.html"><img src="/images/OIG-removebg-preview.png" alt="logo" width="50px">Kiven</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-2">
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  DropDown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">1</a></li>
+                  <li><a class="dropdown-item" href="">2</a></li>
+                  <li><a class="dropdown-item" href="">3</a></li>
+                  <li><a class="dropdown-item" href="">4</a></li>
+                </ul>
+              </li> -->
+              <li class="nav-item"><a class="nav-link link-light" href="/aboutme.html">About</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#">Contact</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="/certificates.html">Certificates</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN sa BODY SITE -->
+     <hr style="color: azure;">
+    <div class="cover bg-light py-5">
+      <div class="container px-3">
+      <div class="row align-items-center">
+        <div class="col-12 col-lg-6 mb-4 mb-lg-0 d-flex justify-content-center">
+          <img class="img-fluid rounded shadow" src="/images/DeWatermark.ai_1750575748780.jpeg" alt="image of me smiling" style="max-width: 85%; height: auto;" />
+        </div>
+        <div class="col-12 col-lg-6 d-flex flex-column align-items-center align-items-lg-start text-center text-lg-start">
+          <div>
+        <p class="lead text-uppercase mb-1 animate-glow-pro-dark" style="font-style: italic;">Hello, I’m</p>
+        <h1 class="intro-title marker animate-pro-wave-dark">
+          <span class="gradient-text-pro-dark">Kiven Cantila</span>
+        </h1>
+        <style>
+          /* Enhanced glowing "Hello I'm" - darky version */
+          .animate-glow-pro-dark {
+            animation: glowProDark 2.2s infinite alternate;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            font-size: 1.3rem;
+            color: #e0e6f7;
+            text-shadow:
+              0 0 8px #0a1931,
+              0 0 16px #185adb,
+              0 0 32px #0a1931,
+              0 0 2px #fff;
+            background: linear-gradient(90deg, #0a1931 0%, #185adb 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+          }
+          @keyframes glowProDark {
+            0% {
+              text-shadow:
+                0 0 8px #0a1931,
+                0 0 16px #185adb,
+                0 0 32px #0a1931,
+                0 0 2px #fff;
+            }
+            100% {
+              text-shadow:
+                0 0 24px #fff,
+                0 0 48px #185adb,
+                0 0 72px #0a1931,
+                0 0 8px #fff;
+            }
+          }
+
+          /* Pro animated name with dark gradient, wave, and shine */
+          .intro-title {
+            font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
+            font-size: 3.2rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            letter-spacing: 0.04em;
+            line-height: 1.1;
+            background: none;
+            border: none;
+            position: relative;
+            z-index: 1;
+          }
+          .gradient-text-pro-dark {
+            background: linear-gradient(90deg, #0a1931 0%, #185adb 40%, #2c394b 80%, #e0e6f7 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+            filter: drop-shadow(0 2px 16px rgba(24,90,219,0.18));
+            padding: 0 0.2em;
+            position: relative;
+            display: inline-block;
+            overflow: hidden;
+          }
+          /* Shine effect */
+          .gradient-text-pro-dark::after {
+            content: '';
+            position: absolute;
+            top: 0; left: -75%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(120deg, rgba(255,255,255,0.0) 0%, rgba(255,255,255,0.18) 50%, rgba(255,255,255,0.0) 100%);
+            transform: skewX(-20deg);
+            animation: shineDark 2.8s infinite;
+            pointer-events: none;
+          }
+          @keyframes shineDark {
+            0% { left: -75%; }
+            60% { left: 110%; }
+            100% { left: 110%; }
+          }
+          .animate-pro-wave-dark {
+            display: inline-block;
+            animation: proWaveDark 2.5s infinite cubic-bezier(.4,1.6,.6,1);
+            transform-origin: 60% 70%;
+            text-shadow: 0 2px 16px rgba(10,25,49,0.18);
+          }
+          @keyframes proWaveDark {
+            0%, 100% { transform: rotate(-2deg) scale(1.01);}
+            10% { transform: rotate(6deg) scale(1.06);}
+            20% { transform: rotate(-5deg) scale(1.03);}
+            30% { transform: rotate(8deg) scale(1.09);}
+            40% { transform: rotate(-4deg) scale(1.02);}
+            50% { transform: rotate(3deg) scale(1.07);}
+            60% { transform: rotate(-3deg) scale(1.01);}
+            70% { transform: rotate(4deg) scale(1.04);}
+            80% { transform: rotate(-2deg) scale(1.02);}
+            90% { transform: rotate(2deg) scale(1.05);}
+          }
+          @media (max-width: 600px) {
+            .intro-title { font-size: 2.1rem; }
+            .animate-glow-pro-dark { font-size: 1.05rem; }
+          }
+        </style>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700;900&display=swap" rel="stylesheet">
+        <hr style="color: azure;">
+        <p class="lead fw-normal mt-2 text-justify-custom" data-aos="fade-up" data-aos-delay="100">
+            I am a Computer Engineering student with a passion for web development. I am currently expanding my skills in Bootstrap 5 and enjoy creating clean, functional websites. Please click the Resume button below to view my qualifications and experience.
+        </p>
+        <hr style="color: azure;">
+        <dit-3" data-aos="fade-up" data-aos-delay="200">
+          <a class="btn resume-btn shadow-sm mt-1 hover-effect badge bg-dark d-inline-flex align-items-center justify-content-center"
+         href="/pages/resume.html">
+        <span class="resume-text text-light me-2">RESUME</span>
+        <i class="fas fa-arrow-right resume-arrow"></i>
+          </a>
+        </div>
+          </div>
+        </div>
+      </div>
+      <style>
+        .resume-btn {
+          transition: transform 0.2s, box-shadow 0.2s, background 0.2s;
+          background: linear-gradient(90deg, #212529 60%, #343a40 100%);
+          border-radius: 2rem;
+          padding: 0.75rem 2rem;
+          font-weight: 600;
+          font-size: 1.1rem;
+          box-shadow: 0 4px 16px rgba(33,37,41,0.15);
+          position: relative;
+          overflow: hidden;
+        }
+        .resume-btn:hover, .resume-btn:focus {
+          animation: bounce 0.5s;
+          transform: translateY(-4px) scale(1.04);
+          box-shadow: 0 8px 24px rgba(33,37,41,0.25);
+          background: linear-gradient(90deg, #343a40 60%, #212529 100%);
+          text-decoration: none;
+        }
+        .resume-arrow {
+          transition: transform 0.3s cubic-bezier(.4,2,.6,1), color 0.2s;
+        }
+        .resume-btn:hover .resume-arrow, .resume-btn:focus .resume-arrow {
+          transform: translateX(8px) scale(1.2) rotate(8deg);
+          color: #ffc107;
+        }
+        .resume-btn:active {
+          transform: scale(0.98);
+        }
+        @keyframes bounce {s
+          0%   { transform: scale(1); }
+          30%  { transform: scale(1.12, 0.88); }
+          50%  { transform: scale(0.96, 1.04); }
+          70%  { transform: scale(1.04, 0.96); }
+          100% { transform: scale(1.02, 0.98); }
+        }
+      </style>
+      </div>
+    </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="wave-bg">
+    </div>
+    <hr style="color: azure;">
+
+    <!-- FOOTER  -->
+    <footer id="contact" class="pt-4 pb-4 text-center bg-light">
+      <div class="container">
+        <div class="my-3">
+          <div class="social-nav">
+            <nav role="navigation">
+              <ul class="nav justify-content-center">
+                <li class="nav-item"></li>
+                  <a class="nav-link" href="https://www.facebook.com/kiven.cantila.web/" target="_blank" title="Facebook">
+                    <i class="fab fa-facebook fa-lg"></i>
+                    <span class="menu-title sr-only">Facebook</span>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://www.instagram.com/cantilakiven/" target="_blank" title="Instagram">
+                    <i class="fab fa-instagram fa-lg"></i>
+                    <span class="menu-title sr-only">Instagram</span>
+                  </a>
+                </li>
+                <!-- Font Awesome CDN for icons -->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <div class="text-small text-secondary">
+          Contact me: <i>cantilakiven.mailbox@icloud.com</i>
+          <div class="mb-1">&copy;2023-2025 Cantila Kiven</div>
+          <div>
+          </div>
+      </div>
+    </footer>
+
+
+  <!-- Offline bundle popper active-->
+  <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap Bundle with Popper (only include once) -->
+  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script> -->
+</body>
+</html>

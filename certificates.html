@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/CSS/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Certificates</title>
+    <link rel="stylesheet" href="bootstrap-5.3.7-dist/css/bootstrap.min.css">
+    <style>
+        :root {
+            --bg-main: #181c24;
+            --bg-card: #23283a;
+            --accent: #4f8cff;
+            --text-main: #e6eaf3;
+            --text-secondary: #b0b8c9;
+            --shadow: 0 6px 32px rgba(0,0,0,0.25);
+            --radius: 14px;
+        }
+        html, body {
+            height: 100%;
+        }
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            background: var(--bg-main);
+            margin: 0;
+            padding: 0;
+            color: var(--text-main);
+            min-height: 100vh;
+        }
+        #certificates-container {
+            max-width: 900px;
+            margin: 48px auto;
+            background: var(--bg-card);
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            padding: 40px 28px;
+            border: 1.5px solid #23283a;
+        }
+        h1 {
+            text-align: center;
+            color: var(--accent);
+            margin-bottom: 38px;
+            font-size: 2.4rem;
+            letter-spacing: 1.5px;
+            font-weight: 700;
+            text-shadow: 0 2px 12px #1a2233;
+        }
+        .certificate {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            gap: 32px;
+            margin-bottom: 40px;
+            background: linear-gradient(120deg, #23283a 80%, #2a3350 100%);
+            border-radius: 10px;
+            padding: 22px 18px;
+            box-shadow: 0 2px 16px rgba(40,60,120,0.12);
+            transition: transform 0.18s, box-shadow 0.18s;
+            border: 1px solid #23283a;
+        }
+        .certificate:hover {
+            transform: translateY(-4px) scale(1.015);
+            box-shadow: 0 8px 32px rgba(79,140,255,0.13);
+            border-color: var(--accent);
+        }
+        .certificate img {
+            width: 100%;
+            max-width: 220px;
+            border-radius: 8px;
+            box-shadow: 0 2px 12px rgba(79,140,255,0.10);
+            background: #23283a;
+            border: 2px solid #23283a;
+            transition: border 0.2s;
+        }
+        .certificate:hover img {
+            border: 2px solid var(--accent);
+        }
+        .certificate p {
+            margin: 0;
+            color: var(--text-secondary);
+            font-size: 1.09rem;
+            line-height: 1.7;
+            letter-spacing: 0.01em;
+        }
+        .certificate strong {
+            color: var(--accent);
+            font-size: 1.13rem;
+            letter-spacing: 0.03em;
+        }
+        @media (max-width: 700px) {
+            #certificates-container {
+                padding: 14px 2vw;
+            }
+            .certificate {
+                flex-direction: column;
+                align-items: center;
+                gap: 16px;
+                padding: 14px;
+            }
+            .certificate img {
+                max-width: 100%;
+            }
+        }
+        /* Scrollbar styling for dark mode */
+        ::-webkit-scrollbar {
+            width: 10px;
+            background: #23283a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #2a3350;
+            border-radius: 8px;
+        }
+        ::selection {
+            background: #4f8cff44;
+        }
+        a {
+            color: var(--accent);
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark">
+      <!-- nAVIGATION ICONS -->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="header-nav" role="navigation">
+        <div class="container"><a class="link-light navbar-brand site-title mb-0" href="/pages/home.html"><img src="/images/OIG-removebg-preview.png" alt="logo" width="50px">Kiven</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span></button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto me-2">
+              <!-- <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  DropDown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="">1</a></li>
+                  <li><a class="dropdown-item" href="">2</a></li>
+                  <li><a class="dropdown-item" href="">3</a></li>
+                  <li><a class="dropdown-item" href="">4</a></li>
+                </ul>
+              </li> -->
+              <li class="nav-item"><a class="nav-link link-light" href="aboutme.html">About</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="#contact">Contact</a></li>
+              <li class="nav-item"><a class="nav-link link-light" href="/pages/certificates.html">Certificates</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="certificates-container">
+        <h1>My Certificates</h1>
+        <div class="certificate">
+            <img src="/images/certificates/C-Participation.png" alt="Certificate 1">
+            <p>
+                <strong>Certificate of Participation</strong><br>
+                Awarded by <span style="color:#fff;">Tech Trends: Cybersecurity</span>, 3rd day of August 2023.<br>
+                Recognizes active participation in the <span style="color:#fff;">Tech Trends</span>.
+            </p>
+        </div>
+        <div class="certificate">
+            <img src="/images/certificates/free.png" alt="Certificate 2">
+            <p>
+                <strong>Free Online Course Completion</strong><br>
+                Issued by <span style="color:#fff;">FreeCodeCamp</span>, July 14 2023.<br>
+                Successfully completed the <span style="color:#fff;">Full Stack Web Development</span> program.
+            </p>
+        </div>
+        <div class="certificate">
+            <img src="/images/certificates/Screenshot (203).png" alt="Certificate 3">
+            <p>
+                <strong>Achievement Certificate</strong><br>
+                Presented by <span style="color:#fff;">ASEAN Foundation</span>, January 2023.<br>
+                For outstanding performance in <span style="color:#fff;">SAP Analytics Cloud Training Session</span>.
+            </p>
+        </div>
+        <div class="certificate">
+            <img src="/images/certificates/Screenshot (204).png" alt="Certificate 4">
+            <p>
+                <strong>Workshop Attendee</strong><br>
+                Organized by <span style="color:#fff;">Institution of Computer Engineers in the Philippines - ICpEp</span>, December 2022.<br>
+                Attended the <span style="color:#fff;">Data Analytics</span> and gained practical skills.
+            </p>
+        </div>
+        <div class="certificate">
+            <img src="/images/certificates/Screenshot (205).png" alt="Certificate 5">
+            <p>
+                <strong>Certificate of Completion</strong><br>
+                Awarded by <span style="color:#fff;">DICT</span>, June 26 2023.<br>
+                Recognized for excellence in <span style="color:#fff;">Tabletop Discussion on Cybersecurity Hygiene</span>.
+            </p>
+        </div>
+        <div class="certificate">
+            <img src="/images/certificates/Screenshot (206).png" alt="Certificate 6">
+            <p>
+                <strong>Participation Certificate</strong><br>
+                Issued by <span style="color:#fff;">DICT</span>, June 2023.<br>
+                For active involvement in <span style="color:#fff;">Digital Literacy Webinar: Exploring the Fundamentals of Computer Networking</span>.
+            </p>
+        </div>
+    </div>
+    <script src="bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kiven Cantila - Resume</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f9f9f9;
+      padding: 20px;
+      color: #333;
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    .resume {
+      max-width: 900px;
+      margin: auto;
+      background: #fff;
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+    }
+
+    .header-text {
+      flex: 1;
+    }
+
+    .header-text h1 {
+      font-size: 2.5rem;
+      color: #111;
+    }
+
+    .header-text p,
+    .header-text .contact {
+      margin-top: 8px;
+      color: #555;
+      font-size: 1rem;
+    }
+
+    .header-text .contact {
+      font-weight: bold;
+      color: #222;
+    }
+
+    .profile-img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 2px solid #ddd;
+      margin-left: 20px;
+    }
+
+    section {
+      margin-top: 30px;
+    }
+
+    section h2 {
+      font-size: 1.5rem;
+      border-bottom: 2px solid #ccc;
+      margin-bottom: 10px;
+      padding-bottom: 4px;
+      color: #222;
+    }
+
+    .section-content {
+      margin-left: 10px;
+    }
+
+    .item {
+      margin-bottom: 15px;
+    }
+
+    .item-title {
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ul {
+      margin-left: 20px;
+      margin-top: 6px;
+    }
+
+    /* Mobile styles */
+    @media (max-width: 600px) {
+      .resume {
+        padding: 20px;
+      }
+
+      .header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .profile-img {
+        margin-top: 15px;
+        width: 100px;
+        height: 100px;
+      }
+
+      .header-text h1 {
+        font-size: 1.8rem;
+      }
+
+      .header-text p,
+      .header-text .contact {
+        font-size: 0.9rem;
+      }
+
+      section h2 {
+        font-size: 1.2rem;
+      }
+
+      body {
+        font-size: 14px;
+      }
+
+      .item-title {
+        flex-direction: column;
+        gap: 4px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume">
+    <div class="header">
+      <div class="header-text">
+        <h1>Kiven Cantila</h1>
+        <p>cantilakiven.mailbox01@gmail.com</p>
+        <p class="contact">New Casul Mutia Z.N. | 7107 | +639816195241</p>
+      </div>
+      <img src="data:image/jpeg;base64,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" alt="Profile Photo" class="profile-img" alt="Profile Photo" class="profile-img" />
+    </div>
+
+    <section>
+      <h2>Objective</h2>
+      <div class="section-content">
+        <p>To obtain a position in any field where I can contribute to organizational goals, grow professionally, and apply my knowledge in a technology-driven environment. Willing to be trained and continuously improve to meet the demands of the role.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>Experience</h2>
+      <div class="section-content">
+        <div class="item">
+          <div class="item-title">
+            <span>On The-Job-Training (240 Hours)</span>
+            <span>2023 – 2024</span>
+          </div>
+          <ul>
+            <li>JRMSU Quality Assurance Center</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Education</h2>
+      <div class="section-content">
+        <div class="item">
+          <div class="item-title">
+            <span>Primary</span>
+            <span>2008 – 2014</span>
+          </div>
+          <p>New Siquijor Elementary School<br>Brgy. New Siquijor Mutia, ZDN</p>
+        </div>
+
+        <div class="item">
+          <div class="item-title">
+            <span>Junior High School</span>
+            <span>2014 – 2018</span>
+          </div>
+          <p>Tubak National High School, Mutia Annex<br>Brgy. Tubak Mutia, ZDN</p>
+        </div>
+
+        <div class="item">
+          <div class="item-title">
+            <span>Senior High School – Major in General Academic Strand (GAS)</span>
+            <span>2018 – 2020</span>
+          </div>
+          <p>Zamboanga del Norte National High School – Turno Campus<br>Brgy. Turno Dipolog City, ZDN</p>
+        </div>
+
+        <div class="item">
+          <div class="item-title">
+            <span>Tertiary – Bachelor of Science in Computer Engineering</span>
+            <span>2020 – 2025</span>
+          </div>
+          <p>Jose Rizal Memorial State University – Main Campus<br>Gov. Sta Cruz, Guading Adasa St, Dapitan City, ZDN – Undergraduate</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Skills & Abilities</h2>
+      <div class="section-content">
+        <ul>
+          <li>Responsive Web Design</li>
+          <li>Front-End Web Development</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <h2>Personal Skills</h2>
+      <div class="section-content">
+        <ul>
+          <li>Can work with a Team</li>
+          <li>Tech Solutions</li>
+          <li>Proficient in Microsoft Office Suite (Word, Excel, PowerPoint)</li>
+          <li>Experienced with Google Workspace (Docs, Sheets, Slides)</li>
+        </ul>
+      </div>
+    </section>
+  </div>
+</body>
+</html>
